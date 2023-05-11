@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour {
     public Camera mainCamera;
     public Vector3 moveDir = new Vector3 (0f,0f,0f);
     private void Start() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         animator = GetComponent<Animator>();
     }
     private void Update() {
