@@ -59,8 +59,9 @@ public class AgentPCG : MonoBehaviour
     }
 
     private void CreateTile(Vector2Int pos) {
-//        var tilePos = map.WorldToCell((Vector3Int) pos);
+        var tilePos = map.WorldToCell((Vector3Int) pos);
 
-        map.SetTile((Vector3Int) pos, floorTile);
+       map.SetTile((Vector3Int) pos, floorTile);
+       
     }
 }

@@ -312,6 +312,23 @@ GameObject:
   m_Component:
   - component: {fileID: 875363017}
   - component: {fileID: 875363016}
+  - component: {fileID: 875363027}
+  - component: {fileID: 875363026}
+  - component: {fileID: 875363025}
+  - component: {fileID: 875363023}
+  - component: {fileID: 875363021}
+  - component: {fileID: 875363019}
+  - component: {fileID: 875363018}
+  - component: {fileID: 875363029}
+  - component: {fileID: 875363028}
+  - component: {fileID: 875363036}
+  - component: {fileID: 875363035}
+  - component: {fileID: 875363034}
+  - component: {fileID: 875363033}
+  - component: {fileID: 875363032}
+  - component: {fileID: 875363031}
+  - component: {fileID: 875363030}
+  - component: {fileID: 875363037}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -326,7 +343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875363015}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3060550ea48266b4184aef665a788610, type: 3}
   m_Name: 
@@ -354,6 +371,353 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &875363018
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229aac31f4bc3914380fdde886358ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: CreateTile
+  rect:
+    serializedVersion: 2
+    x: 985
+    y: 80.70001
+    width: 0
+    height: 44
+  parent: {fileID: 0}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363019
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229aac31f4bc3914380fdde886358ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: CreateTile
+  rect:
+    serializedVersion: 2
+    x: 985
+    y: 80.70001
+    width: 0
+    height: 44
+  parent: {fileID: 0}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363021
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 582
+    y: -32.30002
+    width: 160
+    height: 44
+  parent: {fileID: 875363026}
+  children:
+  - {fileID: 875363031}
+  - {fileID: 875363034}
+  - {fileID: 875363033}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &875363023
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: pChangeDir
+  val: 0
+--- !u!114 &875363025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2217e4d35c0c94ea02cf2166c17e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variables:
+  - {fileID: 875363023}
+  - {fileID: 875363029}
+  - {fileID: 875363028}
+  - {fileID: 875363036}
+  - {fileID: 875363035}
+  masterBlackboard: {fileID: 0}
+--- !u!114 &875363026
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538645f2f9090fd43bc6154b2e89e2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Root
+  rect:
+    serializedVersion: 2
+    x: 582
+    y: -180
+    width: 160
+    height: 44
+  parent: {fileID: 0}
+  children:
+  - {fileID: 875363021}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedEditorNode: {fileID: 0}
+  repeatOnFinish: 1
+  maxExecutionsPerTick: 1000
+  parent: {fileID: 0}
+--- !u!114 &875363028
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46747501655ebfd42aad9f527c08ce48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: direction
+  val: {x: 1, y: 0}
+--- !u!114 &875363029
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46747501655ebfd42aad9f527c08ce48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: position
+  val: {x: 0, y: 0}
+--- !u!114 &875363030
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5245825e2cd57ca46a32aae97b12718d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: RotateToRandomDirection
+  rect:
+    serializedVersion: 2
+    x: 448
+    y: 284.2
+    width: 160
+    height: 59
+  parent: {fileID: 875363032}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363031
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f4a10bc17bb324baf5a459be7bb24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Succeeder
+  rect:
+    serializedVersion: 2
+    x: 448
+    y: 132.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363021}
+  children:
+  - {fileID: 875363032}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363032
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f8fc43d8d667e46a433232d46363ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Random Chance
+  rect:
+    serializedVersion: 2
+    x: 448
+    y: 205.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363031}
+  children:
+  - {fileID: 875363030}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  probability:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.05
+--- !u!114 &875363033
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84fbec0a8ff4ea48a95f16444a1fe70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Walk
+  rect:
+    serializedVersion: 2
+    x: 797
+    y: 132.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363021}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363034
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229aac31f4bc3914380fdde886358ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: CreateTile
+  rect:
+    serializedVersion: 2
+    x: 622
+    y: 131.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363021}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363035
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c800a2845c82d7428126ecd799fc2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: floorTile
+  val: {fileID: 11400000, guid: e6d6fbc3bfb18e24db7b94f3196f7bdd, type: 2}
+--- !u!114 &875363036
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981654b144c6ba945aa7e8f7c7ee7990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: map
+  val: {fileID: 1679197744}
+--- !u!114 &875363037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5f392bbea2fa2499665ed8b604ff86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monoBehaviourTree: {fileID: 875363027}
 --- !u!1 &1330540855
 GameObject:
   m_ObjectHideFlags: 0
