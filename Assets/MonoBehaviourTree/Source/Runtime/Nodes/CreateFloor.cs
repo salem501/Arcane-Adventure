@@ -24,9 +24,55 @@ namespace MBT
           Vector2Int pos = blackboard.GetVariable<Vector2IntVariable>("position").Value;
           Tilemap map = blackboard.GetVariable<TilemapVariable>("map").Value;
           TileBase floorTile = blackboard.GetVariable<TileBaseVariable>("floorTile").Value;
+          TileBase wallTile = blackboard.GetVariable<TileBaseVariable>("wallTile").Value;
           
+          Vector2Int left = pos + Vector2Int.left;
+          Vector2Int upperLeft = pos + Vector2Int.left + Vector2Int.up;
+          Vector2Int up = pos + Vector2Int.up;
+          Vector2Int upperRight = pos + Vector2Int.right + Vector2Int.up;
+          Vector2Int right = pos + Vector2Int.right;
+          Vector2Int bottom = pos + Vector2Int.down;
+          Vector2Int bottomLeft = pos + Vector2Int.left + Vector2Int.down;
+          Vector2Int bottomRight = pos + Vector2Int.right + Vector2Int.down;
+          Vector2Int wallPos = pos + (2 * Vector2Int.down) + (2 * Vector2Int.left);
+
+          //build floor
           map.SetTile((Vector3Int) pos, floorTile);
-          
+          map.SetTile((Vector3Int) left, floorTile);
+          map.SetTile((Vector3Int) upperLeft, floorTile);
+          map.SetTile((Vector3Int) up, floorTile);
+          map.SetTile((Vector3Int) upperRight, floorTile);
+          map.SetTile((Vector3Int) right, floorTile);
+          map.SetTile((Vector3Int) bottom, floorTile);
+          map.SetTile((Vector3Int) bottomLeft, floorTile);
+          map.SetTile((Vector3Int) bottomRight, floorTile);
+
+          //build wall
+          for (int i = 1; i <= 4; i++) {
+            wallPos = wallPos + Vector2Int.up;
+            if (!map.HasTile((Vector3Int) wallPos)) {
+                map.SetTile((Vector3Int) wallPos, wallTile);
+            }
+          }
+          for (int i = 1; i <= 4; i++) {
+            wallPos = wallPos + Vector2Int.right;
+            if (!map.HasTile((Vector3Int) wallPos)) {
+                map.SetTile((Vector3Int) wallPos, wallTile);
+            }
+          }
+          for (int i = 1; i <= 4; i++) {
+            wallPos = wallPos + Vector2Int.down;
+            if (!map.HasTile((Vector3Int) wallPos)) {
+                map.SetTile((Vector3Int) wallPos, wallTile);
+            }
+          }
+          for (int i = 1; i <= 4; i++) {
+            wallPos = wallPos + Vector2Int.left;
+            if (!map.HasTile((Vector3Int) wallPos)) {
+                map.SetTile((Vector3Int) wallPos, wallTile);
+            }
+          }
+
           return NodeResult.success;
       }
 

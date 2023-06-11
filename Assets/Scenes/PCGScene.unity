@@ -302,6 +302,63 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &249074456
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.102964
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.2840347
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -41.284683
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879817280980419537, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8153136495128592900, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
+      propertyPath: m_Name
+      value: FloorTile
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ef2f4e5a5e196445b3e9eab682c132a, type: 3}
 --- !u!1 &875363015
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,9 +383,13 @@ GameObject:
   - component: {fileID: 875363034}
   - component: {fileID: 875363033}
   - component: {fileID: 875363032}
-  - component: {fileID: 875363031}
   - component: {fileID: 875363030}
   - component: {fileID: 875363037}
+  - component: {fileID: 875363038}
+  - component: {fileID: 875363040}
+  - component: {fileID: 875363039}
+  - component: {fileID: 875363042}
+  - component: {fileID: 875363041}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -369,7 +430,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &875363018
 MonoBehaviour:
@@ -434,13 +495,14 @@ MonoBehaviour:
   title: Sequence
   rect:
     serializedVersion: 2
-    x: 582
-    y: -32.30002
+    x: 580
+    y: -131.30002
     width: 160
     height: 44
   parent: {fileID: 875363026}
   children:
-  - {fileID: 875363031}
+  - {fileID: 875363042}
+  - {fileID: 875363041}
   - {fileID: 875363034}
   - {fileID: 875363033}
   behaviourTree: {fileID: 0}
@@ -479,6 +541,7 @@ MonoBehaviour:
   - {fileID: 875363028}
   - {fileID: 875363036}
   - {fileID: 875363035}
+  - {fileID: 875363038}
   masterBlackboard: {fileID: 0}
 --- !u!114 &875363026
 MonoBehaviour:
@@ -495,8 +558,8 @@ MonoBehaviour:
   title: Root
   rect:
     serializedVersion: 2
-    x: 582
-    y: -180
+    x: 577
+    y: -224
     width: 160
     height: 44
   parent: {fileID: 0}
@@ -517,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 0}
+  selectedEditorNode: {fileID: 875363040}
   repeatOnFinish: 1
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -564,37 +627,12 @@ MonoBehaviour:
   title: RotateToRandomDirection
   rect:
     serializedVersion: 2
-    x: 448
-    y: 284.2
+    x: 649
+    y: 161.20001
     width: 160
     height: 59
   parent: {fileID: 875363032}
   children: []
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
---- !u!114 &875363031
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875363015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f4a10bc17bb324baf5a459be7bb24c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Succeeder
-  rect:
-    serializedVersion: 2
-    x: 448
-    y: 132.20001
-    width: 160
-    height: 44
-  parent: {fileID: 875363021}
-  children:
-  - {fileID: 875363032}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -613,11 +651,11 @@ MonoBehaviour:
   title: Random Chance
   rect:
     serializedVersion: 2
-    x: 448
-    y: 205.20001
+    x: 610
+    y: 64.20001
     width: 160
     height: 44
-  parent: {fileID: 875363031}
+  parent: {fileID: 875363041}
   children:
   - {fileID: 875363030}
   behaviourTree: {fileID: 0}
@@ -644,8 +682,8 @@ MonoBehaviour:
   title: Walk
   rect:
     serializedVersion: 2
-    x: 797
-    y: 132.20001
+    x: 966
+    y: -19.799988
     width: 160
     height: 44
   parent: {fileID: 875363021}
@@ -668,8 +706,8 @@ MonoBehaviour:
   title: CreateTile
   rect:
     serializedVersion: 2
-    x: 622
-    y: 131.20001
+    x: 783
+    y: -15.799988
     width: 160
     height: 44
   parent: {fileID: 875363021}
@@ -718,6 +756,125 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monoBehaviourTree: {fileID: 875363027}
+--- !u!114 &875363038
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c800a2845c82d7428126ecd799fc2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: wallTile
+  val: {fileID: 11400000, guid: 4923eb6378cef9349b28975157c5a584, type: 2}
+--- !u!114 &875363039
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986d02c74efe873419bf3bca9c22b87b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: CreateRoom
+  rect:
+    serializedVersion: 2
+    x: 425
+    y: 171.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363040}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363040
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f8fc43d8d667e46a433232d46363ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Random Chance
+  rect:
+    serializedVersion: 2
+    x: 421
+    y: 68.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363042}
+  children:
+  - {fileID: 875363039}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  probability:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 0.05
+--- !u!114 &875363041
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f4a10bc17bb324baf5a459be7bb24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Succeeder
+  rect:
+    serializedVersion: 2
+    x: 608
+    y: -13.799988
+    width: 160
+    height: 44
+  parent: {fileID: 875363021}
+  children:
+  - {fileID: 875363032}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363042
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f4a10bc17bb324baf5a459be7bb24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Succeeder
+  rect:
+    serializedVersion: 2
+    x: 413
+    y: -13.799988
+    width: 160
+    height: 44
+  parent: {fileID: 875363021}
+  children:
+  - {fileID: 875363040}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
 --- !u!1 &1330540855
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +906,7 @@ Transform:
   m_Children:
   - {fileID: 1679197746}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &1330540857
 Grid:
@@ -975,5 +1132,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
