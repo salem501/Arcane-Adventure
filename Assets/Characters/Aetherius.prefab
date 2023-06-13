@@ -2417,7 +2417,7 @@ GameObject:
   - component: {fileID: 4957605393579145647}
   - component: {fileID: -2407774389833138090}
   m_Layer: 0
-  m_Name: Hero
+  m_Name: Aetherius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

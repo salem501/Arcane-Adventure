@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour {
     public List<string> earnedCreatures;
     public List<string> selectedCreatures;
     private void Start() {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         animator = GetComponent<Animator>();
     }
     private void Update() {
