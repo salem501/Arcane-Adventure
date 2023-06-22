@@ -507,6 +507,20 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!115 &96984911
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 5
+  m_Script: 
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_ExecutionOrder: 0
+  m_ClassName: Check2
+  m_Namespace: MBT
 --- !u!1001 &105924218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2617,7 +2631,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2407774389833138090, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
   m_PrefabInstance: {fileID: 1967771565}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29b4cf77880b64540a8771e6ce0d711d, type: 3}
@@ -3746,6 +3760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17187c0f1e9d85499c29299a5ed78b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  Story1: []
 --- !u!1 &1050879559
 GameObject:
   m_ObjectHideFlags: 0
@@ -6075,6 +6091,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17187c0f1e9d85499c29299a5ed78b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  Story1: []
 --- !u!1 &1429597486
 GameObject:
   m_ObjectHideFlags: 0
@@ -6444,6 +6462,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000013223724840, guid: 5e680e523ba9fec4aba42db2a9e21fd3, type: 3}
   m_PrefabInstance: {fileID: 1472835995}
   m_PrefabAsset: {fileID: 0}
+--- !u!115 &1492558872
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 5
+  m_Script: 
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_ExecutionOrder: 0
+  m_ClassName: Check3
+  m_Namespace: MBT
 --- !u!1 &1495343198
 GameObject:
   m_ObjectHideFlags: 0
@@ -8940,6 +8972,266 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+--- !u!1 &1967771566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4957605393579145644, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+  m_PrefabInstance: {fileID: 1967771565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1967771569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedEditorNode: {fileID: 1967771576}
+  repeatOnFinish: 0
+  maxExecutionsPerTick: 1000
+  parent: {fileID: 0}
+--- !u!114 &1967771570
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adfc7cfc9905ad459c9a374dde8e2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: AttackRandomly
+  rect:
+    serializedVersion: 2
+    x: 915
+    y: 225.20001
+    width: 160
+    height: 44
+  parent: {fileID: 1967771576}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &1967771571
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1492558872}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Check3
+  rect:
+    serializedVersion: 2
+    x: 712
+    y: 224.2
+    width: 160
+    height: 44
+  parent: {fileID: 1967771576}
+  children:
+  - {fileID: 1967771577}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &1967771572
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 96984911}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Check2
+  rect:
+    serializedVersion: 2
+    x: 504
+    y: 225.20001
+    width: 160
+    height: 44
+  parent: {fileID: 1967771576}
+  children:
+  - {fileID: 1967771578}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &1967771573
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c3b8aa0b34114cb2b6ec8445d624c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Check1
+  rect:
+    serializedVersion: 2
+    x: 273
+    y: 225.2
+    width: 160
+    height: 44
+  parent: {fileID: 1967771576}
+  children:
+  - {fileID: 1967771579}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &1967771574
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538645f2f9090fd43bc6154b2e89e2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Root
+  rect:
+    serializedVersion: 2
+    x: 500
+    y: 20
+    width: 160
+    height: 44
+  parent: {fileID: 0}
+  children:
+  - {fileID: 1967771576}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &1967771575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2217e4d35c0c94ea02cf2166c17e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variables: []
+  masterBlackboard: {fileID: 0}
+--- !u!114 &1967771576
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08540605df275034fafc8e05c6704214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Selector
+  rect:
+    serializedVersion: 2
+    x: 500
+    y: 113
+    width: 160
+    height: 44
+  parent: {fileID: 1967771574}
+  children:
+  - {fileID: 1967771573}
+  - {fileID: 1967771572}
+  - {fileID: 1967771571}
+  - {fileID: 1967771570}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &1967771577
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4382e987b2ac7d0478dfe0b80d2c6652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: AttackSelected
+  rect:
+    serializedVersion: 2
+    x: 712
+    y: 335.2
+    width: 160
+    height: 44
+  parent: {fileID: 1967771571}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &1967771578
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4382e987b2ac7d0478dfe0b80d2c6652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: AttackSelected
+  rect:
+    serializedVersion: 2
+    x: 504
+    y: 334.2
+    width: 160
+    height: 44
+  parent: {fileID: 1967771572}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &1967771579
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967771566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4382e987b2ac7d0478dfe0b80d2c6652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: AttackSelected
+  rect:
+    serializedVersion: 2
+    x: 273
+    y: 333.2
+    width: 160
+    height: 44
+  parent: {fileID: 1967771573}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
 --- !u!1001 &1987209003
 PrefabInstance:
   m_ObjectHideFlags: 0
