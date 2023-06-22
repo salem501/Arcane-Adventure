@@ -10,6 +10,9 @@ namespace MBT
     {
         public MonoBehaviourTree monoBehaviourTree;
 
+        [SerializeField]
+        private int ticksPerFrame = 1;
+
         void Reset()
         {
             monoBehaviourTree = GetComponent<MonoBehaviourTree>();
@@ -18,7 +21,9 @@ namespace MBT
 
         void Update()
         {
-            monoBehaviourTree.Tick();
+            for (int i = 0; i < ticksPerFrame; i++) {
+                monoBehaviourTree.Tick();
+            }
         }
 
         void OnValidate()
