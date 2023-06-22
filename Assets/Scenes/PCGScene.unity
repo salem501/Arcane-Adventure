@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 10.36, z: -19}
+  m_FollowOffset: {x: 0, y: 10, z: -6}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -487,7 +487,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629062473}
-  m_LocalRotation: {x: 0.21165368, y: -8.076908e-16, z: 3.078558e-16, w: 0.97734475}
+  m_LocalRotation: {x: 0.4607637, y: 0.00000002159653, z: -0.00000001121199, w: 0.8875229}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -505,12 +505,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 875363017}
-  - component: {fileID: 875363016}
   - component: {fileID: 875363027}
   - component: {fileID: 875363026}
   - component: {fileID: 875363025}
-  - component: {fileID: 875363023}
-  - component: {fileID: 875363021}
   - component: {fileID: 875363019}
   - component: {fileID: 875363018}
   - component: {fileID: 875363029}
@@ -524,15 +521,30 @@ GameObject:
   - component: {fileID: 875363038}
   - component: {fileID: 875363040}
   - component: {fileID: 875363039}
-  - component: {fileID: 875363042}
-  - component: {fileID: 875363041}
-  - component: {fileID: 875363043}
   - component: {fileID: 875363044}
   - component: {fileID: 875363049}
   - component: {fileID: 875363048}
   - component: {fileID: 875363047}
   - component: {fileID: 875363046}
   - component: {fileID: 875363045}
+  - component: {fileID: 875363051}
+  - component: {fileID: 875363050}
+  - component: {fileID: 875363052}
+  - component: {fileID: 875363054}
+  - component: {fileID: 875363053}
+  - component: {fileID: 875363064}
+  - component: {fileID: 875363063}
+  - component: {fileID: 875363062}
+  - component: {fileID: 875363061}
+  - component: {fileID: 875363060}
+  - component: {fileID: 875363059}
+  - component: {fileID: 875363058}
+  - component: {fileID: 875363057}
+  - component: {fileID: 875363056}
+  - component: {fileID: 875363065}
+  - component: {fileID: 875363067}
+  - component: {fileID: 875363068}
+  - component: {fileID: 875363069}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -540,26 +552,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &875363016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875363015}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3060550ea48266b4184aef665a788610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map: {fileID: 1679197744}
-  floorTile: {fileID: 11400000, guid: e6d6fbc3bfb18e24db7b94f3196f7bdd, type: 2}
-  pChangeDir: 0
-  pChangeDirIncr: 0.01
-  pBuildRoom: 100
-  pBuildRoomIncr: 5
-  startPos: {x: 0, y: 0}
-  steps: 5000
 --- !u!4 &875363017
 Transform:
   m_ObjectHideFlags: 0
@@ -623,49 +615,6 @@ MonoBehaviour:
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
---- !u!114 &875363021
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875363015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Sequence
-  rect:
-    serializedVersion: 2
-    x: 580
-    y: -131.30002
-    width: 160
-    height: 44
-  parent: {fileID: 875363043}
-  children:
-  - {fileID: 875363042}
-  - {fileID: 875363041}
-  - {fileID: 875363034}
-  - {fileID: 875363033}
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  random: 0
---- !u!114 &875363023
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875363015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e5f4db414f0ab4c82c187a7653e99d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: pChangeDir
-  val: 0
 --- !u!114 &875363025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,12 +628,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variables:
-  - {fileID: 875363023}
   - {fileID: 875363029}
   - {fileID: 875363028}
   - {fileID: 875363036}
   - {fileID: 875363035}
   - {fileID: 875363038}
+  - {fileID: 875363051}
+  - {fileID: 875363052}
+  - {fileID: 875363064}
   masterBlackboard: {fileID: 0}
 --- !u!114 &875363026
 MonoBehaviour:
@@ -701,13 +652,13 @@ MonoBehaviour:
   title: Root
   rect:
     serializedVersion: 2
-    x: 581
-    y: -431
+    x: 580
+    y: -357
     width: 160
     height: 44
   parent: {fileID: 0}
   children:
-  - {fileID: 875363043}
+  - {fileID: 875363067}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -723,8 +674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 875363043}
-  repeatOnFinish: 0
+  selectedEditorNode: {fileID: 875363050}
+  repeatOnFinish: 1
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
 --- !u!114 &875363028
@@ -770,11 +721,11 @@ MonoBehaviour:
   title: Random Chance
   rect:
     serializedVersion: 2
-    x: 610
-    y: 64.20001
+    x: 588
+    y: 18.199997
     width: 160
     height: 44
-  parent: {fileID: 875363041}
+  parent: {fileID: 875363068}
   children:
   - {fileID: 875363049}
   behaviourTree: {fileID: 0}
@@ -801,11 +752,11 @@ MonoBehaviour:
   title: Walk
   rect:
     serializedVersion: 2
-    x: 966
-    y: -19.799988
+    x: 1001
+    y: 77.20001
     width: 160
     height: 44
-  parent: {fileID: 875363021}
+  parent: {fileID: 875363069}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
@@ -825,11 +776,11 @@ MonoBehaviour:
   title: CreateTile
   rect:
     serializedVersion: 2
-    x: 783
-    y: -15.799988
+    x: 787
+    y: 78.20001
     width: 160
     height: 44
-  parent: {fileID: 875363021}
+  parent: {fileID: 875363069}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
@@ -875,6 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monoBehaviourTree: {fileID: 875363027}
+  ticksPerFrame: 10
 --- !u!114 &875363038
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -904,11 +856,11 @@ MonoBehaviour:
   title: CreateRoom
   rect:
     serializedVersion: 2
-    x: 425
-    y: 171.20001
+    x: 253
+    y: 141.20001
     width: 160
     height: 44
-  parent: {fileID: 875363040}
+  parent: {fileID: 875363054}
   children: []
   behaviourTree: {fileID: 0}
   runtimePriority: 0
@@ -928,13 +880,13 @@ MonoBehaviour:
   title: Random Chance
   rect:
     serializedVersion: 2
-    x: 421
-    y: 68.20001
+    x: 305
+    y: 18.200012
     width: 160
     height: 44
-  parent: {fileID: 875363042}
+  parent: {fileID: 875363068}
   children:
-  - {fileID: 875363039}
+  - {fileID: 875363054}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -944,83 +896,6 @@ MonoBehaviour:
     blackboard: {fileID: 0}
     key: 
     constantValue: 0.05
---- !u!114 &875363041
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875363015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f4a10bc17bb324baf5a459be7bb24c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Succeeder
-  rect:
-    serializedVersion: 2
-    x: 608
-    y: -13.799988
-    width: 160
-    height: 44
-  parent: {fileID: 875363021}
-  children:
-  - {fileID: 875363032}
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
---- !u!114 &875363042
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875363015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f4a10bc17bb324baf5a459be7bb24c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Succeeder
-  rect:
-    serializedVersion: 2
-    x: 427
-    y: -13.799988
-    width: 160
-    height: 44
-  parent: {fileID: 875363021}
-  children:
-  - {fileID: 875363040}
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
---- !u!114 &875363043
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875363015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 056841afaed742d4e909e76361b5173f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Repeater
-  rect:
-    serializedVersion: 2
-    x: 583
-    y: -272.80002
-    width: 160
-    height: 44
-  parent: {fileID: 875363026}
-  children:
-  - {fileID: 875363021}
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  loops: 2000
-  infinite: 0
 --- !u!114 &875363044
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1036,8 +911,8 @@ MonoBehaviour:
   title: SmartRotateToRndmDir
   rect:
     serializedVersion: 2
-    x: 608
-    y: 254.20001
+    x: 590
+    y: 145.20001
     width: 160
     height: 44
   parent: {fileID: 875363049}
@@ -1060,8 +935,8 @@ MonoBehaviour:
   title: Sequence
   rect:
     serializedVersion: 2
-    x: 836
-    y: 346.2
+    x: 757
+    y: 202.20001
     width: 160
     height: 44
   parent: {fileID: 875363046}
@@ -1087,8 +962,8 @@ MonoBehaviour:
   title: Repeater
   rect:
     serializedVersion: 2
-    x: 833
-    y: 255.20001
+    x: 755
+    y: 144.20001
     width: 160
     height: 44
   parent: {fileID: 875363049}
@@ -1114,8 +989,8 @@ MonoBehaviour:
   title: Walk
   rect:
     serializedVersion: 2
-    x: 972
-    y: 446.2
+    x: 848
+    y: 265.2
     width: 160
     height: 44
   parent: {fileID: 875363045}
@@ -1138,8 +1013,8 @@ MonoBehaviour:
   title: CreateTile
   rect:
     serializedVersion: 2
-    x: 702
-    y: 449.2
+    x: 681
+    y: 264.2
     width: 160
     height: 44
   parent: {fileID: 875363045}
@@ -1162,14 +1037,471 @@ MonoBehaviour:
   title: Sequence
   rect:
     serializedVersion: 2
-    x: 611
-    y: 163.20001
+    x: 592
+    y: 72.20001
     width: 160
     height: 44
   parent: {fileID: 875363032}
   children:
   - {fileID: 875363044}
   - {fileID: 875363046}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &875363050
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c19911ec6b2eb5458eb49218e1b296e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: RoomCondition
+  rect:
+    serializedVersion: 2
+    x: 587
+    y: -121.79997
+    width: 160
+    height: 44
+  parent: {fileID: 875363065}
+  children:
+  - {fileID: 875363068}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 2
+  comparator: 2
+  intToCompare:
+    useConstant: 1
+    mode: 0
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: 500
+--- !u!114 &875363051
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be6860a83fe93e4bbd689336d96bdc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: createdRooms
+  val: 0
+--- !u!114 &875363052
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c800a2845c82d7428126ecd799fc2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: creatureTile
+  val: {fileID: 11400000, guid: 5bee188acf3dd154c83c1fe98f271d0f, type: 2}
+--- !u!114 &875363053
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292b064a73d841a4eba90542367b67ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: CreateCreature
+  rect:
+    serializedVersion: 2
+    x: 419
+    y: 142.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363054}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363054
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 305
+    y: 74.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363040}
+  children:
+  - {fileID: 875363039}
+  - {fileID: 875363053}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &875363056
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975d6770f0b11644fa10437a31129430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: SmartRotateToRndmDir
+  rect:
+    serializedVersion: 2
+    x: -114
+    y: -22.799988
+    width: 160
+    height: 44
+  parent: {fileID: 875363060}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363057
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84fbec0a8ff4ea48a95f16444a1fe70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Walk
+  rect:
+    serializedVersion: 2
+    x: 84
+    y: 134.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363059}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363058
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229aac31f4bc3914380fdde886358ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: CreateTile
+  rect:
+    serializedVersion: 2
+    x: -81
+    y: 133.20001
+    width: 160
+    height: 44
+  parent: {fileID: 875363059}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363059
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 54
+    y: 31.200012
+    width: 160
+    height: 44
+  parent: {fileID: 875363061}
+  children:
+  - {fileID: 875363058}
+  - {fileID: 875363057}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &875363060
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 64
+    y: -121.80002
+    width: 160
+    height: 44
+  parent: {fileID: 875363062}
+  children:
+  - {fileID: 875363063}
+  - {fileID: 875363056}
+  - {fileID: 875363061}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &875363061
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056841afaed742d4e909e76361b5173f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Repeater
+  rect:
+    serializedVersion: 2
+    x: 55
+    y: -25.799973
+    width: 160
+    height: 44
+  parent: {fileID: 875363060}
+  children:
+  - {fileID: 875363059}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  loops: 3
+  infinite: 0
+--- !u!114 &875363062
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534e3ec7de6cd444e984c2e7f68e42e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Start
+  rect:
+    serializedVersion: 2
+    x: 268
+    y: -180.79999
+    width: 160
+    height: 44
+  parent: {fileID: 875363067}
+  children:
+  - {fileID: 875363060}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  abort: 2
+  invert: 0
+  type: 0
+  boolReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 875363025}
+    key: start
+    constantValue: 0
+  objectReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+  transformReference:
+    useConstant: 0
+    mode: 1
+    blackboard: {fileID: 0}
+    key: 
+    constantValue: {fileID: 0}
+--- !u!114 &875363063
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac6af5e978a888439f25bb3c748390b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: CreateStartRoom
+  rect:
+    serializedVersion: 2
+    x: -289
+    y: -24.800003
+    width: 160
+    height: 44
+  parent: {fileID: 875363060}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363064
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae15c5e6bcb1714080f2e8296c3d17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: start
+  val: 1
+--- !u!114 &875363065
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f4a10bc17bb324baf5a459be7bb24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Succeeder
+  rect:
+    serializedVersion: 2
+    x: 583
+    y: -185.8
+    width: 160
+    height: 44
+  parent: {fileID: 875363067}
+  children:
+  - {fileID: 875363050}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &875363067
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08540605df275034fafc8e05c6704214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Selector
+  rect:
+    serializedVersion: 2
+    x: 582
+    y: -274.8
+    width: 160
+    height: 44
+  parent: {fileID: 875363026}
+  children:
+  - {fileID: 875363062}
+  - {fileID: 875363065}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &875363068
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08540605df275034fafc8e05c6704214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Selector
+  rect:
+    serializedVersion: 2
+    x: 587
+    y: -55.799988
+    width: 160
+    height: 44
+  parent: {fileID: 875363050}
+  children:
+  - {fileID: 875363040}
+  - {fileID: 875363032}
+  - {fileID: 875363069}
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  random: 0
+--- !u!114 &875363069
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875363015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Sequence
+  rect:
+    serializedVersion: 2
+    x: 877
+    y: 13.199966
+    width: 160
+    height: 44
+  parent: {fileID: 875363068}
+  children:
+  - {fileID: 875363034}
+  - {fileID: 875363033}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -1248,7 +1580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 10.36, z: -19}
+  m_FollowOffset: {x: 0, y: 10, z: -6}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1415,7 +1747,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454930209}
-  m_LocalRotation: {x: 0.24701597, y: 0.00000000937817, z: -0.000000002390642, w: 0.9690114}
+  m_LocalRotation: {x: 0.49269882, y: 0.000000029945966, z: -0.000000016955122, w: 0.8701999}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1498,7 +1830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 10.36, z: -19}
+  m_FollowOffset: {x: 0, y: 10, z: -6}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1668,14 +2000,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475798990}
-  m_LocalRotation: {x: 0.22934933, y: -0.000000008373867, z: 0.0000000019731363, w: 0.9733442}
-  m_LocalPosition: {x: 0, y: 10.96, z: -19}
+  m_LocalRotation: {x: 0.47678882, y: 0, z: 0, w: 0.8790179}
+  m_LocalPosition: {x: 0, y: 10.6, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 18.27, y: 83.134, z: -3.389}
+  m_LocalEulerAnglesHint: {x: 10.805, y: 0, z: 0}
 --- !u!1 &1566738879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,12 +2118,12 @@ MonoBehaviour:
   m_BindingMode: 4
   m_SplineCurvature: 0.2
   m_Orbits:
-  - m_Height: 6.86
+  - m_Height: 11.86
     m_Radius: 20.2
-  - m_Height: 10.36
-    m_Radius: 19
-  - m_Height: 10.7
-    m_Radius: 11.97
+  - m_Height: 10
+    m_Radius: 6
+  - m_Height: 5
+    m_Radius: 3
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
   - {fileID: 1454930210}
@@ -1805,7 +2137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566738879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.96, z: -19}
+  m_LocalPosition: {x: 0, y: 10.6, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2098,7 +2430,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891037589}
-  m_LocalRotation: {x: 0.22934929, y: -0.000000008373866, z: 0.0000000019731359, w: 0.9733442}
+  m_LocalRotation: {x: 0.47678882, y: -1e-45, z: -0, w: 0.8790179}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
