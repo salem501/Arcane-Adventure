@@ -9,8 +9,8 @@ namespace MBT
   // Empty Menu attribute prevents Node to show up in "Add Component" menu.
   [AddComponentMenu("")]
   // Register node in visual editor node finder
-  [MBTNode(name = "PCG/CreateRoom")]
-  public class CreateRoom : Leaf
+  [MBTNode(name = "PCG/CreateStartRoom")]
+  public class CreateStartRoom : Leaf
   {
       // These two methods are optional, override only when needed
       // public override void OnAllowInterrupt() {}
@@ -21,13 +21,14 @@ namespace MBT
       {
           Blackboard blackboard = behaviourTree.GetComponent<Blackboard>();
           
+          BoolVariable start = blackboard.GetVariable<BoolVariable>("start");
           Vector2Int pos = blackboard.GetVariable<Vector2IntVariable>("position").Value;
           Tilemap map = blackboard.GetVariable<TilemapVariable>("map").Value;
           TileBase floorTile = blackboard.GetVariable<TileBaseVariable>("floorTile").Value;
           TileBase wallTile = blackboard.GetVariable<TileBaseVariable>("wallTile").Value;
           IntVariable createdRooms = blackboard.GetVariable<IntVariable>("createdRooms");
 
-          (int, int) roomSize = GetRandomRoomSize();
+          (int, int) roomSize = (5, 5);
           int stepSizeVertical = (roomSize.Item1 / 2) + 1;
           int stepSizeHorizontal = (roomSize.Item2 / 2) + 1;
           Vector2Int buildPos = pos;
@@ -99,19 +100,11 @@ namespace MBT
               buildPos.x = pos.x;
           }
 
-          createdRooms.Value += 1;
+          start.Value = false;
           
           return NodeResult.success;
       }
 
-      // These two methods are optional, override only when needed
-      // public override void OnExit() {}
-      // public override void OnDisallowInterrupt() {}
-
       
-      private (int, int) GetRandomRoomSize() {
-        (int, int)[] roomSizes = new (int, int)[] {(9, 9), (15, 7), (13, 9), (7, 11), (7, 15), (9, 13), (11, 7)};
-        return roomSizes[Random.Range(0, roomSizes.Length)];
-      }
   }
 }

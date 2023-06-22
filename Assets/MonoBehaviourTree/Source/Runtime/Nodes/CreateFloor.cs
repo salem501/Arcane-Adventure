@@ -37,16 +37,34 @@ namespace MBT
           Vector2Int wallPos = pos + (2 * Vector2Int.down) + (2 * Vector2Int.left);
 
           //build floor
-          map.SetTile((Vector3Int) pos, floorTile);
-          map.SetTile((Vector3Int) left, floorTile);
-          map.SetTile((Vector3Int) upperLeft, floorTile);
-          map.SetTile((Vector3Int) up, floorTile);
-          map.SetTile((Vector3Int) upperRight, floorTile);
-          map.SetTile((Vector3Int) right, floorTile);
-          map.SetTile((Vector3Int) bottom, floorTile);
-          map.SetTile((Vector3Int) bottomLeft, floorTile);
-          map.SetTile((Vector3Int) bottomRight, floorTile);
-
+          if (CanPlaceFloorAt(pos)) {
+            map.SetTile((Vector3Int) pos, floorTile);
+          }
+          if (CanPlaceFloorAt(left)) {
+            map.SetTile((Vector3Int) left, floorTile);
+          }
+          if (CanPlaceFloorAt(upperLeft)) {
+            map.SetTile((Vector3Int) upperLeft, floorTile);
+          }
+          if (CanPlaceFloorAt(up)) {
+            map.SetTile((Vector3Int) up, floorTile);
+          }
+          if (CanPlaceFloorAt(upperRight)) {
+            map.SetTile((Vector3Int) upperRight, floorTile);
+          }
+          if (CanPlaceFloorAt(right)) {
+            map.SetTile((Vector3Int) right, floorTile);
+          }
+          if (CanPlaceFloorAt(bottom)) {
+            map.SetTile((Vector3Int) bottom, floorTile);
+          }
+          if (CanPlaceFloorAt(bottomLeft)) {
+            map.SetTile((Vector3Int) bottomLeft, floorTile);
+          }
+          if (CanPlaceFloorAt(bottomRight)) {
+            map.SetTile((Vector3Int) bottomRight, floorTile);
+          }
+         
           //build wall
           for (int i = 1; i <= 4; i++) {
             wallPos = wallPos + Vector2Int.up;
@@ -74,6 +92,13 @@ namespace MBT
           }
 
           return NodeResult.success;
+      }
+
+      private bool CanPlaceFloorAt(Vector2Int pos) {
+        Blackboard blackboard = behaviourTree.GetComponent<Blackboard>();
+        Tilemap map = blackboard.GetVariable<TilemapVariable>("map").Value;
+        
+        return (!map.HasTile((Vector3Int) pos) || map.GetTile((Vector3Int) pos).name != "CreatureTile");
       }
 
       // These two methods are optional, override only when needed
