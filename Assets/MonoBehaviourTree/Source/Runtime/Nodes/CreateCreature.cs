@@ -25,9 +25,8 @@ namespace MBT
           Tilemap map = blackboard.GetVariable<TilemapVariable>("map").Value;
           TileBase creatureTile = blackboard.GetVariable<TileBaseVariable>("creatureTile").Value;
           
-          Vector2Int spawnPos = pos + RandomDir();
+          Vector2Int spawnPos = pos + RandomDir() * (int) Random.Range(1,3);
           map.SetTile((Vector3Int) spawnPos, creatureTile);
-          Debug.Log(map.GetTile((Vector3Int) spawnPos).name);
 
           return NodeResult.success;
       }

@@ -13,12 +13,31 @@ public class PlayerController : MonoBehaviour {
     public List<string> earnedCards;
     public List<string> earnedCreatures;
     public List<string> selectedCreatures;
+    public int health = 1;
+    public int hits;
+    public int shoots;
+    public int stagesCleared;
+
     private void Start() {
         animator = GetComponent<Animator>();
     }
     private void Update() {
         HandleCursor();
         HandleMovementInput();
+        HandleShootInput();
+        CheckDeath();
+    }
+
+    void OnEnable() {
+        hits = PlayerPrefs.GetInt("hits", 0);
+        shoots = PlayerPrefs.GetInt("shoots", 0);
+        stagesCleared = PlayerPrefs.GetInt("stagesCleared", 0);
+    }
+
+    void OnDisable() {
+        PlayerPrefs.SetInt("hits", hits);
+        PlayerPrefs.SetInt("shoots", shoots);
+        PlayerPrefs.SetInt("stagesCleared", stagesCleared);
     }
 
     void HandleCursor() {
@@ -77,5 +96,18 @@ public class PlayerController : MonoBehaviour {
         }
         float rotateSpeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+    }
+
+    void HandleShootInput() {
+        if (Input.GetButton("Fire1")) {
+            PlayerGun.Instance.Shoot();
+        }
+    }
+
+    private void CheckDeath() {
+        if (health <= 0) {
+            print("You died!");
+            SceneManager.LoadScene("ScoreboardScene");
+        }
     }
 }

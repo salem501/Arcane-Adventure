@@ -26,7 +26,6 @@ namespace MBT
           Tilemap map = blackboard.GetVariable<TilemapVariable>("map").Value;
           TileBase floorTile = blackboard.GetVariable<TileBaseVariable>("floorTile").Value;
           TileBase wallTile = blackboard.GetVariable<TileBaseVariable>("wallTile").Value;
-          IntVariable createdRooms = blackboard.GetVariable<IntVariable>("createdRooms");
 
           (int, int) roomSize = (5, 5);
           int stepSizeVertical = (roomSize.Item1 / 2) + 1;
